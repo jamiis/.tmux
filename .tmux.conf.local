@@ -107,3 +107,18 @@ tmux_conf_new_session_prompt=false
 # this is the place to further customize tmux's configuration
 
 set -g history-limit 10000
+
+# plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+# tmux-continuum config
+set -g @continuum-boot 'on'
+set -g @continuum-boot-options 'iterm,fullscreen'
+
+# initialize tmux plugin manager 
+# NOTE: keep this line at the very bottom of tmux.conf
+run '~/.tmux/plugins/tpm/tpm'
+
